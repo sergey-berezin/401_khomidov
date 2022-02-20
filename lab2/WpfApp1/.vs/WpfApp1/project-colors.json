@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "420002c5-cc9a-4df3-b461-3933fb349c8e": {
+      "ProjectGuid": "420002c5-cc9a-4df3-b461-3933fb349c8e",
+      "DisplayName": "WpfApp1",
+      "ColorIndex": 0
+    },
+    "2896f697-fef0-42cb-8165-a2c50e3501b4": {
+      "ProjectGuid": "2896f697-fef0-42cb-8165-a2c50e3501b4",
+      "DisplayName": "DetectionLibrary",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}

@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800">
+    <Grid>
+        <ToolBar HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" VerticalAlignment="Top" Width="153">
+            <Button Name="Open_Button" Content="Open" Click="Button_Open"/>
+            <Button Name="Start_Button" Content="Start" Click="Button_Start"/>
+            <Button Name="Stop_Button" Content="Stop" Click="Button_Stop"/>
+            <Button Name="Clear_Button" Content="Clear" Click="Button_Clear"/>
+        </ToolBar>
+        <ListBox Name="listBox_Images" Margin="10,70,446,10">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Vertical" Width="325"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding}" Width="300"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListView Name="listView_Images" HorizontalAlignment="Left" Width="216" Margin="574,0,0,316">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ProcessedImageId}"/>
+                    <GridViewColumn Header="Content" DisplayMemberBinding="{Binding ImageContent}"/>
+                    <GridViewColumn Header="Hash Code" DisplayMemberBinding="{Binding ImageHashCode}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView Name="listView_Objects" Height="283" VerticalAlignment="Top" Margin="359,173,10,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding RecognizedObjectId}"/>
+                    <GridViewColumn Header="X1" DisplayMemberBinding="{Binding X1}"/>
+                    <GridViewColumn Header="Y1" DisplayMemberBinding="{Binding Y1}"/>
+                    <GridViewColumn Header="X2" DisplayMemberBinding="{Binding X2}"/>
+                    <GridViewColumn Header="Y2" DisplayMemberBinding="{Binding Y2}"/>
+                    <GridViewColumn Header="Class Name" DisplayMemberBinding="{Binding ClassName}"/>
+                    <GridViewColumn Header="Image ID" DisplayMemberBinding="{Binding ProcessedImageId}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

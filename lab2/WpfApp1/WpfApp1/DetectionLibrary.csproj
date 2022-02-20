@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<OutputType>WinExe</OutputType>
+		<UseWindowsForms>False</UseWindowsForms>
+		<UseWPF>False</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.ML" Version="1.6.0" />
+		<PackageReference Include="Microsoft.ML.ImageAnalytics" Version="1.6.0" />
+		<PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.9.0" />
+		<PackageReference Include="Microsoft.ML.OnnxTransformer" Version="1.6.0" />
+	</ItemGroup>
+
+</Project>
